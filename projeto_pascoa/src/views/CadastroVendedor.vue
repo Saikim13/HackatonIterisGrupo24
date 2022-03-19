@@ -66,6 +66,18 @@
             v-model="checkbox"
             label="Você aceita receber atualizações por e-mail?"
             ></v-checkbox>
+<<<<<<< HEAD
+<router-link to="/Alerta">
+            <v-btn
+            :disabled="!valid"
+            color="success"
+            class="mr-4"
+            @click="validate"
+            >
+            Validate
+            </v-btn>
+</router-link>
+=======
 
             <v-dialog
             v-model="dialog"
@@ -82,6 +94,7 @@
                 Cadastrar
                 </v-btn>
             </template>
+>>>>>>> 4502c7288beeec7fcadf6b14f64f9058b637d701
 
             <v-card>
                 <v-card-title class="text-h5 text-black text-center">
