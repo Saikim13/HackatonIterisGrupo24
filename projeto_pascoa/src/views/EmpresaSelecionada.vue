@@ -1,5 +1,5 @@
 <template>
-<div class="empresa-selecionada">
+<div class="empresa-selecionada text-center">
 <v-card
     :loading="loading"
     class="mx-auto my-12"
