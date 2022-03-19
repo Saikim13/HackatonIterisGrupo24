@@ -74,7 +74,7 @@ width: 180px;
 margin: 0 auto;
 }
 
-@media only screen and (max-width: 470px) {
+@media only screen and (max-width: 570px) {
 .container {
   margin: 10px 15px 10px 15px;
 }
@@ -86,6 +86,21 @@ padding: 10px;
 
 .user-props {
 width: 200px;
+}
+}
+
+@media only screen and (max-width: 360px) {
+.container {
+  margin: 5px 10px 5px 10px;
+}
+
+.user-container {
+width: 310px;
+padding: 10px;
+}
+
+.user-props {
+width: 180px;
 }
 }
 
