@@ -6,12 +6,9 @@ import EmpresaSelecionada from '../views/EmpresaSelecionada'
 import PaginaDeCadastro from '../views/PaginaDeCadastro'
 import PaginaLogin from '../views/PaginaLogin'
 import CadastroVendedor from '../views/CadastroVendedor'
-<<<<<<< HEAD
 import QuantidadeEncomenda from '../views/QuantidadeEncomenda'
 import EncomendaRealizada from '../views/EncomendaRealizada'
-=======
 import AlertaCadastro from '../views/AlertaCadastro'
->>>>>>> c70bd8a8af8b31b94c47cff735907d6842c58b18
 
 Vue.use(VueRouter)
 
@@ -47,7 +44,6 @@ const routes = [
     component: PaginaLogin    
   },
   {
-<<<<<<< HEAD
     path: '/Quantidade/:id',      
     name: 'Quantidade',      
     component: QuantidadeEncomenda    
@@ -55,13 +51,12 @@ const routes = [
   {
     path: '/Realizada/:id/:quantidade',      
     name: 'Realizada',      
-    component: EncomendaRealizada    
-=======
+    component: EncomendaRealizada},
+    { 
     path: '/Alerta',      
     name: 'AlertaCadastro',      
     component: AlertaCadastro    
->>>>>>> c70bd8a8af8b31b94c47cff735907d6842c58b18
-  }
+  },
 ]
 
 const router = new VueRouter({

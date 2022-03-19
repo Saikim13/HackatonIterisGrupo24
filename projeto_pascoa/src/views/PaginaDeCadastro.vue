@@ -40,7 +40,7 @@
       v-model="checkbox"
       label="Você aceita receber atualizações por e-mail?"
     ></v-checkbox>
-
+<router-link class="alert" to="/Alerta">
     <v-btn
       :disabled="!valid"
       color="cyan lighten-3"
@@ -49,6 +49,7 @@
     >
       Cadastrar
     </v-btn>
+</router-link>
 
     <v-btn
       color="pink lighten-4"
@@ -97,5 +98,7 @@
 </script>
 
 <style scoped>
-
+.alert{
+    text-decoration: none;
+}
 </style>
