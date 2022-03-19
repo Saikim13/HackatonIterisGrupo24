@@ -7,6 +7,9 @@ import PaginaDeCadastro from '../views/PaginaDeCadastro'
 import PaginaLogin from '../views/PaginaLogin'
 import PaginaUsuario from '../views/PaginaUsuario'
 import CadastroVendedor from '../views/CadastroVendedor'
+import QuantidadeEncomenda from '../views/QuantidadeEncomenda'
+import EncomendaRealizada from '../views/EncomendaRealizada'
+import AlertaCadastro from '../views/AlertaCadastro'
 
 Vue.use(VueRouter)
 
@@ -45,6 +48,20 @@ const routes = [
     path: '/Usuario',
     name: 'PaginaUsuario',
     component: PaginaUsuario   
+  },
+  {
+    path: '/Quantidade/:id',      
+    name: 'Quantidade',      
+    component: QuantidadeEncomenda    
+  },
+  {
+    path: '/Realizada/:id/:quantidade',      
+    name: 'Realizada',      
+    component: EncomendaRealizada},
+    { 
+    path: '/Alerta',      
+    name: 'AlertaCadastro',      
+    component: AlertaCadastro    
   },
 ]
 
