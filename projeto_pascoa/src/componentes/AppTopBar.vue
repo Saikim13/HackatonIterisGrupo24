@@ -32,15 +32,7 @@
                 </v-list-item-icon>
                 <v-list-item-title> Lista de Ovos</v-list-item-title>
             </v-list-item>     
-            </router-link>
-            <router-link class="link" to="/Empresa">
-            <v-list-item>
-                <v-list-item-icon>
-                <v-icon>mdi-format-list-bulleted</v-icon>
-                </v-list-item-icon>
-                <v-list-item-title> Lista de Vendedores</v-list-item-title>
-            </v-list-item>     
-            </router-link>
+            </router-link>            
             <router-link class="link" to="/Cadastro">
             <v-list-item>
                 <v-list-item-icon>
