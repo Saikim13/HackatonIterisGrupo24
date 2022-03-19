@@ -28,6 +28,11 @@ const routes = [
       name: 'Cadastro',
       component: PaginaDeCadastro
     },
+    {
+      path: '/Empresa/:id',      
+      name: 'Empresa',      
+      component: EmpresaSelecionada     
+      }
 ]
 
 const router = new VueRouter({
