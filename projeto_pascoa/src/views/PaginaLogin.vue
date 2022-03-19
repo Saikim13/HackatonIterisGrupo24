@@ -24,7 +24,7 @@
 
 
             <div class="botao">
-                <router-link to="/user">
+                <router-link to="/usuario">
                 <v-btn 
                 color="cyan lighten-3"
                 >
