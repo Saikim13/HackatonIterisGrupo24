@@ -1,6 +1,6 @@
 <template>
     <v-container class="container">
-        <h1 class="form-container text-center">Cadastro</h1>
+        <h1 class="form-container text-h6 text-center">Cadastro</h1>
    <v-form
     ref="form"
     v-model="valid"
