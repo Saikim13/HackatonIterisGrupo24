@@ -6,6 +6,8 @@ import EmpresaSelecionada from '../views/EmpresaSelecionada'
 import PaginaDeCadastro from '../views/PaginaDeCadastro'
 import PaginaLogin from '../views/PaginaLogin'
 import CadastroVendedor from '../views/CadastroVendedor'
+import QuantidadeEncomenda from '../views/QuantidadeEncomenda'
+import EncomendaRealizada from '../views/EncomendaRealizada'
 
 Vue.use(VueRouter)
 
@@ -39,6 +41,16 @@ const routes = [
     path: '/Login',      
     name: 'PaginaLogin',      
     component: PaginaLogin    
+  },
+  {
+    path: '/Quantidade/:id',      
+    name: 'Quantidade',      
+    component: QuantidadeEncomenda    
+  },
+  {
+    path: '/Realizada/:id/:quantidade',      
+    name: 'Realizada',      
+    component: EncomendaRealizada    
   }
 ]
 
