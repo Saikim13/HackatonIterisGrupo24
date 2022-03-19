@@ -37,7 +37,7 @@
                 <v-expand-transition>
                     <div v-show="show">
                         <v-card-text>
-<img
+                    <img
                         :src= "ovos.imagem"
                         :alt="ovos.nome"
                         >
@@ -68,7 +68,6 @@ export default {
         .then(resposta => resposta.json())
         .then(json => {
             this.listaOvos = json
-            console.log(this.listaOvos)
         })
     },
 }
