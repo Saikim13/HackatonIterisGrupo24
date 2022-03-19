@@ -36,17 +36,17 @@
 
                 <v-expand-transition>
                     <div v-show="show">
-                        <v-card-text>
+                        <v-card>
                     <img
                         :src= "ovos.imagem"
                         :alt="ovos.nome"
                         >
                             <br />
-                        </v-card-text>
+                        </v-card>
                     </div>
-                </v-expand-transition>
-                </tr>
-            </tbody>
+                 </v-expand-transition>
+                    </tr>
+                </tbody>
             </template>
         </v-simple-table>
 
