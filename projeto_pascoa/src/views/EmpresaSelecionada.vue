@@ -15,10 +15,9 @@
 
     <v-img
       height="250"
-      src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+      :src="listaOvos[idEmpresa].imagem"
     ></v-img>
-
-    <v-card-title>Cafe Badilico</v-card-title>
+    <v-card-title>{{listaOvos[idEmpresa].local.nome}}</v-card-title>
 
     <v-card-text>
       <v-row
@@ -40,7 +39,7 @@
       </v-row>
 
       <div class="my-4 text-subtitle-1">
-        $ • Italian, Cafe
+        Endereço: {{listaOvos[idEmpresa].local.endereco}} - {{listaOvos[idEmpresa].local.cep}}
       </div>
 
       <div>Small plates, salads & sandwiches - an intimate setting with 12 indoor seats plus patio seating.</div>
@@ -81,16 +80,29 @@
 
 <script>
 export default {
-  name: 'EmpresaSelecionada',
- data: () => ({
-      loading: false,
-      selection: 1,
-    }),
+  name: "EmpresaSelecionada",
+  loading: false,
+  selection: 1,
+
+  data() {
+    return{
+      listaOvos: [],
+      idEmpresa:1,
+    }
+  },
+
+  created() {
+        fetch('https://it3-hbn-default-rtdb.firebaseio.com/ovosPascoa.json')
+        .then(resposta => resposta.json())
+        .then(json => {
+            this.listaOvos = json
+            console.log(this.listaOvos[0]);
+        })
+    },
 
     methods: {
       reserve () {
         this.loading = true
-
         setTimeout(() => (this.loading = false), 2000)
       },
     },
@@ -99,5 +111,7 @@ export default {
 </script>
 
 <style scoped>
-
+.empresa-selecionada{
+  text-decoration: none;
+}
 </style>
