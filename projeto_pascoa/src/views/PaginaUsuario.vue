@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <h1>Usuário</h1>
+  <v-container class="container">
+    <h2 class="text-h6 text-center">Usuário</h2>
       <v-card elevation="2" class="user-container">
       <v-avatar class="user-avatar"
       color="primary" size="56"><img src="../assets/john.jpg" alt="Foto do usuário"></v-avatar>
@@ -14,16 +14,18 @@
       <div class="user-props">
       <span class="user-title">Email:</span><span> {{email}}</span>
       </div>
+      <div class="botao">
       <v-btn
-        color="blue lighten-4"
+        color="cyan lighten-3"
         class="mr-4 mt-2 btn-std"
-        @click="reset"
       >
         Editar cadastro
       </v-btn>
       </div>
+      </div>
   </v-card>
-  </div>
+  </v-container>
+
 </template>
 <script>
   export default {
@@ -36,13 +38,11 @@
 </script>
 
 <style scoped>
-.container {
-margin: 10px 85px 30px;
-}
+
 .user-container {
 align-items: center;
 display: flex;
-width: 430px;
+max-width: 100%;
 padding: 0px 15px 15px 15px;
 margin-top: 20px;
 }
@@ -52,22 +52,29 @@ margin-right: 30px;
 .user-props__container {
 display:flex;
 flex-direction: column;
- justify-content: space-between;
- padding-top: 40px;
+ justify-content: space-evenly;
+ padding-top: 30px;
 }
 
 .user-props {
 width: 300px;
 display:flex;
- justify-content: space-between;
+justify-content: left;
 }
 .user-title {
 font-weight: bold;
+margin-right: 4px;
 
 }
 
 .btn-std {
 width: 180px;
 margin: 0 auto;
+}
+
+.botton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 </style>

@@ -9,10 +9,7 @@
             <thead>
                 <tr>
                     <th colspan="2" class="text-left">
-                        Ovos
-                    </th>
-                    <th class="text-right">
-                        Lista
+                        Vendedores
                     </th>
                 </tr>
             </thead>
