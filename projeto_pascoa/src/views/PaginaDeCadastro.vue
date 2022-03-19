@@ -1,16 +1,16 @@
 <template>
-    <v-container>
-        <h1 class="form-container">Cadastro</h1>
+    <v-container class="container">
+        <h1 class="form-container">CADASTRO</h1>
    <v-form
     ref="form"
     v-model="valid"
     lazy-validation
   >
     <v-text-field
-      v-model="name"
-      :counter="10"
+      v-model="nome"
+      :counter="30"
       :rules="nameRules"
-      label="Name"
+      label="Nome completo"
       required
     ></v-text-field>
 
@@ -21,43 +21,43 @@
       required
     ></v-text-field>
 
-    <v-select
-      v-model="select"
-      :items="items"
-      :rules="[v => !!v || 'Item is required']"
-      label="Item"
+    <v-text-field 
+      type="password"
+      v-model="senha"
+      :counter="20"
+      :rules="SenhaRules"
+      label="Cadastre uma senha"
       required
-    ></v-select>
+    ></v-text-field>
+
+    <v-text-field 
+      v-model="cidade"
+      label="Identifique sua cidade"
+      required
+    ></v-text-field>
 
     <v-checkbox
       v-model="checkbox"
-      :rules="[v => !!v || 'You must agree to continue!']"
-      <!-- label="Você deseja receber atualizações por e-mail?" -->
+      label="Você aceita receber atualizações por e-mail?"
     ></v-checkbox>
 
     <v-btn
       :disabled="!valid"
-      color="success"
+      color="cyan lighten-3"
       class="mr-4"
       @click="validate"
     >
-      Validate
+      Cadastrar
     </v-btn>
 
     <v-btn
-      color="error"
+      color="pink lighten-4"
       class="mr-4"
       @click="reset"
     >
-      Reset Form
+      Refazer Formulário
     </v-btn>
 
-    <v-btn
-      color="warning"
-      @click="resetValidation"
-    >
-      Reset Validation
-    </v-btn>
   </v-form>
     </v-container>
 </template>
@@ -67,20 +67,17 @@
       valid: true,
       name: '',
       nameRules: [
-        v => !!v || 'Name is required',
-        v => (v && v.length <= 10) || 'Name must be less than 10 characters',
+        v => !!v || 'Nome é obrigatório',
+        v => (v && v.length <= 30) || 'O nome deve ter menos de 30 caracteres',
       ],
       email: '',
       emailRules: [
-        v => !!v || 'E-mail is required',
-        v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+        v => !!v || 'E-mail é obrigatório',
+        v => /.+@.+\..+/.test(v) || 'E-mail deve ser válido',
       ],
-      select: null,
-      items: [
-        'Item 1',
-        'Item 2',
-        'Item 3',
-        'Item 4',
+      SenhaRules: [
+        v => !!v || 'senha é obrigatória',
+        v => (v && v.length <= 20) || 'A senha deve ter no máximo 20 caracteres',
       ],
       checkbox: false,
     }),
