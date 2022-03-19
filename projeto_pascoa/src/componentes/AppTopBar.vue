@@ -16,7 +16,8 @@
 
             <v-tooltip v-else right bottom>
                 <template v-slot:activator="{ on, attrs }">
-                <v-btn class="mx-auto" icon v-on="on" v-bind="attrs" small fab @click="darkMode">
+                <v-btn class="mx-auto" icon v-on="on" v-bind="attrs" ,
+                small fab @click="darkMode">
                     <v-icon>mdi-white-balance-sunny</v-icon>
                 </v-btn>
                 </template>
