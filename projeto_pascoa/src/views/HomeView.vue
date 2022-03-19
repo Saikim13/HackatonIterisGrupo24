@@ -2,7 +2,7 @@
   <v-app>
     <v-card width="80%" class="mx-auto">
       <v-card-title class="align-center justify-center">
-        Seja bem-vinde ao Luna Easter
+        Bem-vinde ao Luna Easter
       </v-card-title>
         <v-carousel v-model="model" hide-delimiters>
         <v-carousel-item
@@ -14,7 +14,7 @@
         >  
         </v-carousel-item>          
       </v-carousel>
-      <v-card-text>
+      <v-card-text class="descricao">
         Conheça a magia do ovo de Páscoa caseiro. 
         O melhor de tudo é que você tem como personalizar esse doce de 
         acordo com o gosto de cada cliente. 
@@ -51,5 +51,7 @@ export default {
 </script>
 
 <style scoped>
-
+   .descricao {
+    text-align: justify;
+    }  
 </style>
