@@ -19,11 +19,6 @@ const routes = [
     name: 'ListaOvos',
     component: ListaOvos
   },
-  {
-      path: '/Empresa',
-      name: 'Empresa',
-      component: EmpresaSelecionada
-    },
     {
       path: '/Cadastro',
       name: 'Cadastro',
