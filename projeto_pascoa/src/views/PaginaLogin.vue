@@ -22,22 +22,25 @@
             </router-link>
             </div>
 
-            <router-link to="/user">
+
             <div class="botao">
+                <router-link to="/user">
                 <v-btn 
                 color="cyan lighten-3"
                 >
                 Entrar
-            </v-btn>
+                </v-btn>
+                </router-link>
+            
             
             <div class="social">
-                <v-icon>mdi-facebook</v-icon>
-                <v-icon>mdi-linkedin</v-icon>
+                <a href='https://facebook.com'><v-icon>mdi-facebook</v-icon></a>
+                <a href='https://linkedin.com'><v-icon>mdi-linkedin</v-icon></a>
             </div>
 
 
             </div>
-            </router-link>
+
 
         </v-form>
     </v-container>
@@ -53,6 +56,10 @@ export default {
 
 <style scoped>
 
+    h2 {
+        margin-top: 18px;
+    }
+
     form {
         margin-top: 16px;
     }
@@ -62,7 +69,6 @@ export default {
     }
 
     .cadastro a {
-        color: black;
         text-decoration: none;
     }
 
@@ -77,6 +83,12 @@ export default {
     }
 
     .social {
-        padding: 4px
+        display: flex;
+        justify-content: space-around;
+
+    }
+
+    .social a {
+        text-decoration: none;
     }
 </style>

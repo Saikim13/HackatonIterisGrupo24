@@ -58,7 +58,15 @@
                 <v-list-item-icon>
                 <v-icon>mdi-clipboard-file-outline</v-icon>
                 </v-list-item-icon>
-                <v-list-item-title> Cadastro</v-list-item-title>
+                <v-list-item-title> Cadastro Usuário</v-list-item-title>
+            </v-list-item>     
+            </router-link>
+            <router-link class="link" to="/Vendedor">
+            <v-list-item>
+                <v-list-item-icon>
+                <v-icon>mdi-clipboard-file-outline</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title> Cadastro Vendedor</v-list-item-title>
             </v-list-item>     
             </router-link>
             <router-link class="link" to="/U">
