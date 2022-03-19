@@ -16,8 +16,7 @@
 
             <v-tooltip v-else right bottom>
                 <template v-slot:activator="{ on, attrs }">
-                <v-btn class="mx-auto" icon v-on="on" v-bind="attrs" ,
-                small fab @click="darkMode">
+                <v-btn class="mx-auto" icon v-on="on" v-bind="attrs" small fab @click="darkMode">
                     <v-icon>mdi-white-balance-sunny</v-icon>
                 </v-btn>
                 </template>
@@ -59,7 +58,15 @@
                 <v-list-item-icon>
                 <v-icon>mdi-clipboard-file-outline</v-icon>
                 </v-list-item-icon>
-                <v-list-item-title> Cadastro</v-list-item-title>
+                <v-list-item-title> Cadastro Usuário</v-list-item-title>
+            </v-list-item>     
+            </router-link>
+            <router-link class="link" to="/Cadastro">
+            <v-list-item>
+                <v-list-item-icon>
+                <v-icon>mdi-clipboard-file-outline</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title> Cadastro Vendedor</v-list-item-title>
             </v-list-item>     
             </router-link>
             <router-link class="link" to="/U">
