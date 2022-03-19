@@ -2,23 +2,28 @@
   <v-app>
     <v-card width="80%" class="mx-auto">
       <v-card-title class="align-center justify-center">
-        Seja bem-vinde 
+        Seja bem-vinde ao Luna Easter
       </v-card-title>
-        <v-carousel v-model="model">
+        <v-carousel v-model="model" hide-delimiters>
         <v-carousel-item
           v-for="(dado,i) in dados"
           :key="i"
           :src="dado.imagem"
           reverse-transition="fade-transition"
           transition="fade-transition"
-        >      
-        </v-carousel-item>
+        >  
+        </v-carousel-item>          
       </v-carousel>
-      <v-text>
-      </v-text>
+      <v-card-text>
+        Conheça a magia do ovo de Páscoa caseiro. 
+        O melhor de tudo é que você tem como personalizar esse doce de 
+        acordo com o gosto de cada cliente. 
+        Além, também, de poder aproveitar os momentos 
+        na cozinha de casa pra se divertir com as crianças e o 
+        principal: ainda conseguir economizar e ajudar as suas finanças pessoais.
+      </v-card-text>
       <v-card-actions class="justify-center">
-        <v-btn>Conheça os produtos</v-btn>
-        <v-btn>Conheça os vendedores</v-btn>        
+        <v-btn @click="$router.push({path: '/ovos'})">Ovos disponíveis</v-btn>              
       </v-card-actions>
     </v-card>
   </v-app>
