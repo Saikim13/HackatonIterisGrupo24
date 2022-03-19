@@ -5,6 +5,7 @@ import ListaOvos from '../views/ListaOvos'
 import EmpresaSelecionada from '../views/EmpresaSelecionada'
 import PaginaDeCadastro from '../views/PaginaDeCadastro'
 import PaginaLogin from '../views/PaginaLogin'
+import PaginaUsuario from '../views/PaginaUsuario'
 import CadastroVendedor from '../views/CadastroVendedor'
 import QuantidadeEncomenda from '../views/QuantidadeEncomenda'
 import EncomendaRealizada from '../views/EncomendaRealizada'
@@ -34,14 +35,19 @@ const routes = [
     component: PaginaDeCadastro
   },
   {
-    path: '/Empresa/:id',      
-    name: 'Empresa',      
-    component: EmpresaSelecionada     
+    path: '/Empresa/:id',
+    name: 'Empresa',
+    component: EmpresaSelecionada
   },
   {
-    path: '/Login',      
-    name: 'PaginaLogin',      
-    component: PaginaLogin    
+    path: '/Login',
+    name: 'PaginaLogin',
+    component: PaginaLogin
+  },
+  {
+    path: '/Usuario',
+    name: 'PaginaUsuario',
+    component: PaginaUsuario   
   },
   {
     path: '/Quantidade/:id',      
