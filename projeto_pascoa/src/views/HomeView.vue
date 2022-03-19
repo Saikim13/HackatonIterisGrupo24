@@ -11,7 +11,7 @@
           :src="dado.imagem"
           reverse-transition="fade-transition"
           transition="fade-transition"
-        >  
+        >        
         </v-carousel-item>          
       </v-carousel>
       <v-card-text class="descricao">
@@ -23,7 +23,10 @@
         principal: ainda conseguir economizar e ajudar as suas finanças pessoais.
       </v-card-text>
       <v-card-actions class="justify-center">
-        <v-btn @click="$router.push({path: '/Ovos'})">Ovos disponíveis</v-btn>              
+        <v-btn @click="$router.push({path: '/Ovos'})">Ovos disponíveis</v-btn>
+      </v-card-actions>
+      <v-card-actions class="justify-center">
+        <v-btn @click="$router.push({path: '/Usuario'})">Seja um vendedor(a)</v-btn>
       </v-card-actions>
     </v-card>
   </v-app>
@@ -51,6 +54,8 @@ export default {
 </script>
 
 <style scoped>
+    
+
    .descricao {
     text-align: justify;
     }  

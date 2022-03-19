@@ -1,8 +1,19 @@
 <template>
-    <v-container>
-        <h1>Parabéns!</h1>
-        <h2>Cadastro realizado com sucesso!</h2>
-    </v-container>
+  <div class="d-flex flex-column justify-space-between align-center">
+    <v-slider
+      v-model="width"
+      class="align-self-stretch"
+      min="200"
+      max="500"
+      step="1"
+    ></v-slider>
+
+    <v-img
+      :aspect-ratio="16/9"
+      :width="width"
+      src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+    ></v-img>
+  </div>
 </template>
 
 <script>
@@ -12,13 +23,4 @@ export default {
 </script>
 
 <style scoped>
-template{
-    background-image: url(../assets/4680.jpg);
-}
-v-container{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
 </style>

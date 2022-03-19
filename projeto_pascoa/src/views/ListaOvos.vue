@@ -27,26 +27,26 @@
 
                 <v-card-actions>
                     <v-spacer></v-spacer>
-                    <v-btn text @click="show = !show"></v-btn>
+                    <v-btn text @click="show[index].show = !show[index].show"></v-btn>
 
-                    <v-btn icon @click="show = !show">
-                        <v-icon>{{ show ? "mdi-chevron-up" : "mdi-chevron-down" }}</v-icon>
+                    <v-btn icon @click="show[index].show = !show[index].show">
+                        <v-icon>{{ show[index].show ? "mdi-chevron-up" : "mdi-chevron-down" }}</v-icon>
                     </v-btn>
                 </v-card-actions>
 
                 <v-expand-transition>
-                    <div v-show="show">
-                        <v-card>
+                    <div v-show="show[index].show">
+                        <v-card-text>
                     <img
                         :src= "ovos.imagem"
                         :alt="ovos.nome"
                         >
                             <br />
-                        </v-card>
+                        </v-card-text>
                     </div>
-                 </v-expand-transition>
-                    </tr>
-                </tbody>
+                </v-expand-transition>
+                </tr>
+            </tbody>
             </template>
         </v-simple-table>
 
@@ -60,7 +60,18 @@ export default {
     data() {
         return{
             listaOvos: [],
-            show: false
+            show: [
+                {id:1, show: false},
+                {id:2,show: false},
+                {id:3,show: false},
+                {id:4,show: false},
+                {id:5,show: false},
+                {id:6,show: false},
+                {id:7,show: false},
+                {id:8,show: false},
+                {id:9,show: false},
+                {id:10,show: false}
+                ]
         }
     },
     created() {
