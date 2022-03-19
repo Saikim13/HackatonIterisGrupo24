@@ -38,7 +38,7 @@
             active-class="pink lighten-4 white--text text--accent-4"
             >
             <router-link class="link" to="/">
-            <v-list-item>
+            <v-list-item class="lista">
                 <v-list-item-icon>
                 <v-icon>mdi-home</v-icon>
                 </v-list-item-icon>
@@ -46,7 +46,7 @@
             </v-list-item>     
             </router-link>
             <router-link class="link" to="/Ovos">
-            <v-list-item>
+            <v-list-item class="lista">
                 <v-list-item-icon>
                 <v-icon>mdi-egg-easter</v-icon>
                 </v-list-item-icon>
@@ -54,7 +54,7 @@
             </v-list-item>     
             </router-link>            
             <router-link class="link" to="/Cadastro">
-            <v-list-item>
+            <v-list-item class="lista">
                 <v-list-item-icon>
                 <v-icon>mdi-clipboard-file-outline</v-icon>
                 </v-list-item-icon>
@@ -62,7 +62,7 @@
             </v-list-item>     
             </router-link>
             <router-link class="link" to="/Vendedor">
-            <v-list-item>
+            <v-list-item class="lista">
                 <v-list-item-icon>
                 <v-icon>mdi-clipboard-file-outline</v-icon>
                 </v-list-item-icon>
@@ -70,7 +70,7 @@
             </v-list-item>     
             </router-link>
             <router-link class="link" to="/U">
-            <v-list-item>
+            <v-list-item class="lista">
                 <v-list-item-icon>
                 <v-icon>mdi-account</v-icon>
                 </v-list-item-icon>
@@ -78,7 +78,7 @@
             </v-list-item>     
             </router-link>
             <router-link class="link" to="/Login">
-            <v-list-item>
+            <v-list-item class="lista">
                 <v-list-item-icon>
                 <v-icon>mdi-login-variant</v-icon>
                 </v-list-item-icon>
@@ -112,5 +112,9 @@ export default {
 <style scoped>
     .link {
         text-decoration: none;
+    }
+    .lista:hover {
+        background-color: #FCE4EC;
+        color: black;
     }
 </style>
