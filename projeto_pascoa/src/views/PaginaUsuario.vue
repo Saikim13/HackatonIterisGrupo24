@@ -17,7 +17,6 @@
       <v-btn
         color="blue lighten-4"
         class="mr-4 mt-2 btn-std"
-        @click="reset"
       >
         Editar cadastro
       </v-btn>
@@ -36,9 +35,11 @@
 </script>
 
 <style scoped>
+
 .container {
 margin: 10px 85px 30px;
 }
+
 .user-container {
 align-items: center;
 display: flex;
@@ -49,6 +50,7 @@ margin-top: 20px;
 .user-avatar {
 margin-right: 30px;
 }
+
 .user-props__container {
 display:flex;
 flex-direction: column;
@@ -61,6 +63,7 @@ width: 300px;
 display:flex;
  justify-content: space-between;
 }
+
 .user-title {
 font-weight: bold;
 
@@ -70,4 +73,21 @@ font-weight: bold;
 width: 180px;
 margin: 0 auto;
 }
+
+@media only screen and (max-width: 470px) {
+.container {
+  margin: 10px 15px 10px 15px;
+}
+
+.user-container {
+width: 330px;
+padding: 10px;
+}
+
+.user-props {
+width: 200px;
+}
+}
+
+
 </style>
