@@ -14,6 +14,13 @@
       <div class="user-props">
       <span class="user-title">Email:</span><span> {{email}}</span>
       </div>
+      <v-btn
+        color="blue lighten-4"
+        class="mr-4 mt-2 btn-std"
+        @click="reset"
+      >
+        Editar cadastro
+      </v-btn>
       </div>
   </v-card>
   </div>
@@ -35,17 +42,18 @@ margin: 10px 85px 30px;
 .user-container {
 align-items: center;
 display: flex;
-width: 400px;
-padding: 15px;
+width: 430px;
+padding: 0px 15px 15px 15px;
 margin-top: 20px;
 }
 .user-avatar {
-margin-right: 15px;
+margin-right: 30px;
 }
 .user-props__container {
 display:flex;
 flex-direction: column;
  justify-content: space-between;
+ padding-top: 40px;
 }
 
 .user-props {
@@ -56,5 +64,10 @@ display:flex;
 .user-title {
 font-weight: bold;
 
+}
+
+.btn-std {
+width: 180px;
+margin: 0 auto;
 }
 </style>
