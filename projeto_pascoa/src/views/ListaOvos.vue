@@ -1,7 +1,7 @@
 <template>
     <v-container>
-<h2 class="text-h6 text-center">
-            Classificação
+        <h2 class="text-h6 text-center">
+            Lista de Vendedores
         </h2>
 
         <v-simple-table>
@@ -9,28 +9,42 @@
             <thead>
                 <tr>
                     <th colspan="2" class="text-left">
-                        Clubes
+                        Ovos
                     </th>
                     <th class="text-right">
-                        Pontos
+                        Lista
                     </th>
                 </tr>
             </thead>
 
             <tbody>
-                <tr v-for="(ovos, index) of ovosLista" :key="ovos.id">
+                <tr v-for="(ovos, index) of listaOvos" :key="ovos.id">
                     <td> {{ index + 1 }}</td>
                     <td>
-                            <v-avatar size= "24" >
-                                <img
-                                    :src= "ovos.imagem"
-                                    :alt="ovos.nome"
-                                >
-                            </v-avatar>
-                       <span class="pl-2"> {{ ovos.nome }} </span>
-
+                        <span> {{ ovos.nome }}</span>
+                        
                     </td>
-                    <td class="text-right">{{ ovos.local }}</td>
+
+                <v-card-actions>
+                    <v-spacer></v-spacer>
+                    <v-btn text @click="show = !show"></v-btn>
+
+                    <v-btn icon @click="show = !show">
+                        <v-icon>{{ show ? "mdi-chevron-up" : "mdi-chevron-down" }}</v-icon>
+                    </v-btn>
+                </v-card-actions>
+
+                <v-expand-transition>
+                    <div v-show="show">
+                        <v-card-text>
+<img
+                        :src= "ovos.imagem"
+                        :alt="ovos.nome"
+                        >
+                            <br />
+                        </v-card-text>
+                    </div>
+                </v-expand-transition>
                 </tr>
             </tbody>
             </template>
@@ -45,20 +59,26 @@ export default {
 
     data() {
         return{
-            listaOvos: []
+            listaOvos: [],
+            show: false
         }
     },
     created() {
         fetch('https://it3-hbn-default-rtdb.firebaseio.com/ovosPascoa.json')
         .then(resposta => resposta.json())
         .then(json => {
-            this.ovosLista = json
-            console.log(this.ovosLista)
+            this.listaOvos = json
+            console.log(this.listaOvos)
         })
     },
 }
 </script>
 
 <style scoped>
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
 
 </style>
