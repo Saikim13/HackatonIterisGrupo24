@@ -8,10 +8,10 @@
         <v-carousel-item
           v-for="(dado,i) in dados"
           :key="i"
-          :src="dado.imagem"
           reverse-transition="fade-transition"
           transition="fade-transition"
-        >  
+        >
+        <img :src="dado.imagem" />  
         </v-carousel-item>          
       </v-carousel>
       <v-card-text class="descricao">
@@ -51,6 +51,10 @@ export default {
 </script>
 
 <style scoped>
+    img {
+      max-height: 500%;
+    }
+
    .descricao {
     text-align: justify;
     }  

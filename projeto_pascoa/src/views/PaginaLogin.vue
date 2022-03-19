@@ -43,5 +43,13 @@ export default {
 </script>
 
 <style scoped>
+    .cadastro {
+        display: flex;
+        justify-content: flex-end;
+    }
 
+    .cadastro a {
+        color: black;
+        text-decoration: none;
+    }
 </style>
