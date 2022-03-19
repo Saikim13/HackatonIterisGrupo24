@@ -32,8 +32,7 @@
     <v-checkbox
       v-model="checkbox"
       :rules="[v => !!v || 'You must agree to continue!']"
-      label="Do you agree?"
-      required
+      <!-- label="Você deseja receber atualizações por e-mail?" -->
     ></v-checkbox>
 
     <v-btn
