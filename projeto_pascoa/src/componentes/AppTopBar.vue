@@ -25,7 +25,7 @@
                 <v-list-item-title> Home</v-list-item-title>
             </v-list-item>     
             </router-link>
-            <router-link class="link" to="/ovos">
+            <router-link class="link" to="/Ovos">
             <v-list-item>
                 <v-list-item-icon>
                 <v-icon>mdi-egg-easter</v-icon>
@@ -57,7 +57,7 @@
                 <v-list-item-title> Usuário</v-list-item-title>
             </v-list-item>     
             </router-link>
-            <router-link class="link" to="/">
+            <router-link class="link" to="/Login">
             <v-list-item>
                 <v-list-item-icon>
                 <v-icon>mdi-login-variant</v-icon>

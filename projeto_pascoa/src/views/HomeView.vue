@@ -23,7 +23,7 @@
         principal: ainda conseguir economizar e ajudar as suas finanças pessoais.
       </v-card-text>
       <v-card-actions class="justify-center">
-        <v-btn @click="$router.push({path: '/ovos'})">Ovos disponíveis</v-btn>              
+        <v-btn @click="$router.push({path: '/Ovos'})">Ovos disponíveis</v-btn>              
       </v-card-actions>
     </v-card>
   </v-app>
