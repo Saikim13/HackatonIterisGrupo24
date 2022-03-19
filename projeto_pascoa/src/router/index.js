@@ -39,7 +39,7 @@ const routes = [
     path: '/Login',      
     name: 'PaginaLogin',      
     component: PaginaLogin    
-  }
+  },
 ]
 
 const router = new VueRouter({
