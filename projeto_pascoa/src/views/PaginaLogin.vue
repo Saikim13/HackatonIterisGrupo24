@@ -56,6 +56,10 @@ export default {
 
 <style scoped>
 
+    h2 {
+        margin-top: 18px;
+    }
+
     form {
         margin-top: 16px;
     }
