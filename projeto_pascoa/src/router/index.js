@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ListaOvos from '../views/ListaOvos'
 import EmpresaSelecionada from '../views/EmpresaSelecionada'
+import PaginaDeCadastro from '../views/PaginaDeCadastro'
 
 Vue.use(VueRouter)
 
@@ -21,6 +22,11 @@ const routes = [
       path: '/Empresa',
       name: 'Empresa',
       component: EmpresaSelecionada
+    },
+    {
+      path: '/Cadastro',
+      name: 'Cadastro',
+      component: PaginaDeCadastro
     },
 ]
 
