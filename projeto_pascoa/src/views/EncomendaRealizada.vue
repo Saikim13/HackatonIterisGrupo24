@@ -71,7 +71,4 @@ export default {
 </script>
 
 <style scoped>
-.empresa-selecionada{
-  text-decoration: none;
-}
 </style>

@@ -9,6 +9,7 @@ import CadastroVendedor from '../views/CadastroVendedor'
 import QuantidadeEncomenda from '../views/QuantidadeEncomenda'
 import EncomendaRealizada from '../views/EncomendaRealizada'
 import AlertaCadastro from '../views/AlertaCadastro'
+import EmpresaEncomenda from '../views/EmpresaEncomenda'
 
 Vue.use(VueRouter)
 
@@ -56,6 +57,11 @@ const routes = [
     path: '/Alerta',      
     name: 'AlertaCadastro',      
     component: AlertaCadastro    
+  },
+  { 
+    path: '/Encomendas',      
+    name: 'Encomendas',      
+    component: EmpresaEncomenda    
   },
 ]
 
