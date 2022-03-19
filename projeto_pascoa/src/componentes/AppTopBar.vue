@@ -61,7 +61,7 @@
                 <v-list-item-title> Cadastro Usuário</v-list-item-title>
             </v-list-item>     
             </router-link>
-            <router-link class="link" to="/Cadastro">
+            <router-link class="link" to="/Vendedor">
             <v-list-item>
                 <v-list-item-icon>
                 <v-icon>mdi-clipboard-file-outline</v-icon>
