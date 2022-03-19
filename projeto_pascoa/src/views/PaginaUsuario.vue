@@ -49,6 +49,7 @@ margin-top: 20px;
 .user-avatar {
 margin-right: 30px;
 }
+
 .user-props__container {
 display:flex;
 flex-direction: column;
@@ -61,6 +62,7 @@ width: 300px;
 display:flex;
 justify-content: left;
 }
+
 .user-title {
 font-weight: bold;
 margin-right: 4px;
