@@ -1,7 +1,7 @@
 <template>
 <v-container class="alerta">
     <img src="https://i.pinimg.com/564x/d0/fe/72/d0fe7218c16ae25b5e731e76c6a5300d.jpg">
-  <h1>Parabés!</h1>
+  <h1>Parabéns!</h1>
   <h2>Seu cadastro foi concluído!</h2>
 </v-container>
 </template>

@@ -1,6 +1,6 @@
 <template>
     <v-container>
-        <h2 class="text-h6 text-center">Realize o seu Login</h2>   
+        <h2 class="text-center">Realize o seu Login</h2>   
 
         <v-form
             ref="form"
