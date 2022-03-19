@@ -7,15 +7,15 @@
         <v-navigation-drawer
         v-model="drawer"
         fixed
-        temporary
+        temporary       
         > 
         <v-list
             nav
-            dense
+            dense      
         >
             <v-list-item-group
             v-model="group"
-            active-class="cyan lighten-3 darken-4--text text--accent-4"
+            active-class="pink lighten-4 white--text text--accent-4"
             >
             <router-link class="link" to="/">
             <v-list-item>
