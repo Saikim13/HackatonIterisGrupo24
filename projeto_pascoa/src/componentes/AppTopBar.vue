@@ -1,6 +1,6 @@
 <template>
     <v-container>
-        <v-app-bar app>
+        <v-app-bar app class="cyan lighten-3">
                 <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
         </v-app-bar>
 
@@ -15,7 +15,7 @@
         >
             <v-list-item-group
             v-model="group"
-            active-class="blue darken-4--text text--accent-4"
+            active-class="cyan lighten-3 darken-4--text text--accent-4"
             >
             <router-link class="link" to="/">
             <v-list-item>
@@ -44,7 +44,7 @@
             <router-link class="link" to="/Cadastro">
             <v-list-item>
                 <v-list-item-icon>
-                <v-icon>mdi-format-list-bulleted</v-icon>
+                <v-icon>mdi-clipboard-file-outline</v-icon>
                 </v-list-item-icon>
                 <v-list-item-title> Cadastro</v-list-item-title>
             </v-list-item>     
@@ -52,7 +52,7 @@
             <router-link class="link" to="/U">
             <v-list-item>
                 <v-list-item-icon>
-                <v-icon>mdi-format-list-bulleted</v-icon>
+                <v-icon>mdi-account</v-icon>
                 </v-list-item-icon>
                 <v-list-item-title> Usuário</v-list-item-title>
             </v-list-item>     
@@ -60,7 +60,7 @@
             <router-link class="link" to="/">
             <v-list-item>
                 <v-list-item-icon>
-                <v-icon>mdi-format-list-bulleted</v-icon>
+                <v-icon>mdi-login-variant</v-icon>
                 </v-list-item-icon>
                 <v-list-item-title> Login</v-list-item-title>
             </v-list-item>     
