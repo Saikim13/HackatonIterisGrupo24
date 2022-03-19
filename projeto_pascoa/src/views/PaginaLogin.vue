@@ -29,6 +29,13 @@
                 >
                 Entrar
             </v-btn>
+            
+            <div class="social">
+                <v-icon>mdi-facebook</v-icon>
+                <v-icon>mdi-linkedin</v-icon>
+            </div>
+
+
             </div>
             </router-link>
 
@@ -59,7 +66,17 @@ export default {
         text-decoration: none;
     }
 
+    .botao {
+        margin-top: 8px;
+        display: flex;
+        justify-content: space-between;
+    }
+
     .botao a{
         text-decoration: none;
+    }
+
+    .social {
+        padding: 4px
     }
 </style>
