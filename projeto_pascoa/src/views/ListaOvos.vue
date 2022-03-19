@@ -21,7 +21,7 @@
                 <tr v-for="(ovos, index) of listaOvos" :key="ovos.id">
                     <td> {{ index + 1 }}</td>
                     <td>
-                        <span> {{ ovos.nome }}</span>
+                        <span @click="$router.push({path: `/Empresa/${ovos.id}`})"> {{ ovos.nome }}</span>
                         
                     </td>
 
