@@ -34,7 +34,7 @@
             label="Do you agree?"
             required
             ></v-checkbox>
-
+<router-link to="/Alerta">
             <v-btn
             :disabled="!valid"
             color="success"
@@ -43,6 +43,7 @@
             >
             Validate
             </v-btn>
+</router-link>
 
             <v-btn
             color="error"
