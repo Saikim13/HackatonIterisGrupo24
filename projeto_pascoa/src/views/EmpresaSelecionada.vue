@@ -1,5 +1,5 @@
 <template>
-<div class="empresa-selecionada">
+<div class="empresa-selecionada text-center">
 <v-card
     :loading="loading"
     class="mx-auto my-12"
@@ -47,7 +47,7 @@
 
     <v-card-actions>
       <v-btn
-        color="orange lighten-2"
+        color="cyan lighten-1"
         text
       >
         Produto
@@ -81,8 +81,12 @@
           </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+        <v-btn  @click="$router.push({path: `/Quantidade/${idEmpresa}`})" block class="white--text" color="cyan lighten-2">
+              Encomendar
+        </v-btn>
       </div>
     </v-expand-transition>
+
   </v-card>
 </div>
 </template>
@@ -104,7 +108,7 @@ export default {
   },
 
   created() {
-        fetch('https://it3-hbn-default-rtdb.firebaseio.com/ovosPascoa.json?=this.$route.params.id')
+        fetch('https://it3-hbn-default-rtdb.firebaseio.com/ovosPascoa.json?')
         .then(resposta => resposta.json())
         .then(json => {
           this.listaOvos = json

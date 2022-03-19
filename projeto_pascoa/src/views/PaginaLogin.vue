@@ -69,7 +69,6 @@ export default {
     }
 
     .cadastro a {
-        color: black;
         text-decoration: none;
     }
 
@@ -84,7 +83,8 @@ export default {
     }
 
     .social {
-        padding-right: 16px;
+        display: flex;
+        justify-content: space-around;
 
     }
 

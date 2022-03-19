@@ -1,6 +1,6 @@
 <template>
     <v-container>
-        <h1 class="form-container">Seja um Vendedor(a) Luna</h1>
+        <h2 class="form-container text-h6 text-center">Seja um Vendedor(a) Luna</h2>
          <v-form
             ref="form"
             v-model="valid"
