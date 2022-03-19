@@ -20,4 +20,7 @@ export default {
     background-image: url("https://pin.it/2swlWIv");
     flex-direction: column;
 }
+img{
+    border-radius: 20px;
+}
 </style>
