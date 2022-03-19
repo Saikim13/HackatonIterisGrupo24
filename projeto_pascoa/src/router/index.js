@@ -5,6 +5,7 @@ import ListaOvos from '../views/ListaOvos'
 import EmpresaSelecionada from '../views/EmpresaSelecionada'
 import PaginaDeCadastro from '../views/PaginaDeCadastro'
 import PaginaLogin from '../views/PaginaLogin'
+import CadastroVendedor from '../views/CadastroVendedor'
 
 Vue.use(VueRouter)
 
@@ -13,6 +14,11 @@ const routes = [
     path: '/',
     name: 'home',
     component: HomeView
+  },
+  {
+    path: '/Vendedor',
+    name: 'Vendedor',
+    component: CadastroVendedor
   },
   {
     path: '/Ovos',
