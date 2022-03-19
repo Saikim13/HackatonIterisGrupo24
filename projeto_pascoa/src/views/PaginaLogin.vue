@@ -18,16 +18,18 @@
             <div class="cadastro">
             
             <router-link to="/cadastro">
-                <p>Cadastrar</p>
+                <p><strong>Cadastrar</strong></p>
             </router-link>
             </div>
 
             <router-link to="/user">
-            <v-btn
-            color="indigo lighten-1"
-            >
-            Entrar
+            <div class="botao">
+                <v-btn 
+                color="cyan lighten-3"
+                >
+                Entrar
             </v-btn>
+            </div>
             </router-link>
 
         </v-form>
@@ -43,6 +45,10 @@ export default {
 </script>
 
 <style scoped>
+
+    form {
+        margin-top: 16px;
+    }
     .cadastro {
         display: flex;
         justify-content: flex-end;
@@ -50,6 +56,10 @@ export default {
 
     .cadastro a {
         color: black;
+        text-decoration: none;
+    }
+
+    .botao a{
         text-decoration: none;
     }
 </style>
