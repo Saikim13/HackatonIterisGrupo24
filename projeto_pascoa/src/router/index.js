@@ -5,6 +5,7 @@ import ListaOvos from '../views/ListaOvos'
 import EmpresaSelecionada from '../views/EmpresaSelecionada'
 import PaginaDeCadastro from '../views/PaginaDeCadastro'
 import PaginaLogin from '../views/PaginaLogin'
+import AlertaCadastro from '../views/AlertaCadastro'
 
 Vue.use(VueRouter)
 
@@ -38,6 +39,11 @@ const routes = [
       path: '/Login',      
       name: 'PaginaLogin',      
       component: PaginaLogin    
+    },
+    {
+      path: '/Alerta',      
+      name: 'Alerta',      
+      component: AlertaCadastro   
     }
 ]
 
