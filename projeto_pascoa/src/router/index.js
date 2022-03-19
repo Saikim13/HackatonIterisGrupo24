@@ -26,25 +26,20 @@ const routes = [
     component: ListaOvos
   },
   {
-      path: '/Empresa',
-      name: 'Empresa',
-      component: EmpresaSelecionada
-    },
-    {
-      path: '/Cadastro',
-      name: 'Cadastro',
-      component: PaginaDeCadastro
-    },
-    {
-      path: '/Empresa/:id',      
-      name: 'Empresa',      
-      component: EmpresaSelecionada     
-    },
-    {
-      path: '/Login',      
-      name: 'PaginaLogin',      
-      component: PaginaLogin    
-    }
+    path: '/Cadastro',
+    name: 'Cadastro',
+    component: PaginaDeCadastro
+  },
+  {
+    path: '/Empresa/:id',      
+    name: 'Empresa',      
+    component: EmpresaSelecionada     
+  },
+  {
+    path: '/Login',      
+    name: 'PaginaLogin',      
+    component: PaginaLogin    
+  }
 ]
 
 const router = new VueRouter({

@@ -1,7 +1,27 @@
 <template>
     <v-container>
         <v-app-bar app class="cyan lighten-3">
-                <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
+            <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
+            <v-toolbar-title>
+                Luna Easter 🐰 
+            </v-toolbar-title>
+            <v-tooltip v-if="!$vuetify.theme.dark" bottom>
+                <template v-slot:activator="{ on, attrs }">
+                <v-btn class="mx-auto" icon right v-on="on" v-bind="attrs"  small fab @click="darkMode">
+                    <v-icon class="mr-1">mdi-moon-waxing-crescent</v-icon>
+                </v-btn>
+                </template>
+                <span>ON</span>
+            </v-tooltip>
+
+            <v-tooltip v-else right bottom>
+                <template v-slot:activator="{ on, attrs }">
+                <v-btn class="mx-auto" icon v-on="on" v-bind="attrs" small fab @click="darkMode">
+                    <v-icon>mdi-white-balance-sunny</v-icon>
+                </v-btn>
+                </template>
+                <span>OFF</span>
+            </v-tooltip>  
         </v-app-bar>
 
         <v-navigation-drawer
@@ -70,7 +90,12 @@ export default {
         ({
             drawer: false,
             group: null
-        })
+        }),
+  methods: {
+  darkMode() {
+      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+    }
+  }
     
 }
 </script>
