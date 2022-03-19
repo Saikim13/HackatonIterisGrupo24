@@ -26,7 +26,7 @@
         <v-btn @click="$router.push({path: '/Ovos'})">Ovos disponíveis</v-btn>
       </v-card-actions>
       <v-card-actions class="justify-center">
-        <v-btn @click="$router.push({path: '/Usuario'})">Seja um vendedor(a)</v-btn>
+        <v-btn @click="$router.push({path: '/Vendedor'})">Seja um vendedor(a)</v-btn>
       </v-card-actions>
     </v-card>
   </v-app>
