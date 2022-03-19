@@ -15,10 +15,9 @@
 
     <v-img
       height="250"
-      src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+      :src="listaOvos[idEmpresa].imagem"
     ></v-img>
-
-    <v-card-title>Cafe Badilico</v-card-title>
+    <v-card-title>{{listaOvos[idEmpresa].local.nome}}</v-card-title>
 
     <v-card-text>
       <v-row
@@ -26,7 +25,7 @@
         class="mx-0"
       >
         <v-rating
-          :value="4.5"
+          :value="avaliacao"
           color="amber"
           dense
           half-increments
@@ -35,62 +34,86 @@
         ></v-rating>
 
         <div class="grey--text ms-4">
-          4.5 (413)
+           {{avaliacao}} ({{quantidade}})
         </div>
       </v-row>
 
       <div class="my-4 text-subtitle-1">
-        $ • Italian, Cafe
+        Endereço: {{listaOvos[idEmpresa].local.endereco}} - {{listaOvos[idEmpresa].local.cep}}
       </div>
-
-      <div>Small plates, salads & sandwiches - an intimate setting with 12 indoor seats plus patio seating.</div>
     </v-card-text>
 
     <v-divider class="mx-4"></v-divider>
 
-    <v-card-title>Tonight's availability</v-card-title>
-
-    <v-card-text>
-      <v-chip-group
-        v-model="selection"
-        active-class="deep-purple accent-4 white--text"
-        column
-      >
-        <v-chip>5:30PM</v-chip>
-
-        <v-chip>7:30PM</v-chip>
-
-        <v-chip>8:00PM</v-chip>
-
-        <v-chip>9:00PM</v-chip>
-      </v-chip-group>
-    </v-card-text>
-
     <v-card-actions>
       <v-btn
-        color="deep-purple lighten-2"
+        color="orange lighten-2"
         text
-        @click="reserve"
       >
-        Reserve
+        Produto
+      </v-btn>
+      
+      <v-spacer></v-spacer>
+
+      <v-btn
+        icon
+        @click="show = !show"
+      >
+        <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
       </v-btn>
     </v-card-actions>
+
+    <v-expand-transition>
+      <div v-show="show">
+        <v-divider></v-divider>
+        <v-list-item>
+          <v-list-item-content>
+            <v-list-item-title><h3>{{listaOvos[idEmpresa].nome}}</h3></v-list-item-title>
+            <v-list-item-subtitle>Sabor: {{listaOvos[idEmpresa].sabor}}</v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item two-line>
+          <v-list-item-content>
+            <v-list-item-title>
+              <div class="my-4 text-subtitle-1">
+                R${{listaOvos[idEmpresa].preco}}
+              </div>
+          </v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </div>
+    </v-expand-transition>
   </v-card>
 </div>
 </template>
 
 <script>
 export default {
-  name: 'EmpresaSelecionada',
- data: () => ({
+  name: "EmpresaSelecionada",
+  data() {
+    return{
+      listaOvos: [],
+      idEmpresa:this.$route.params.id-1,
+      show: false,
       loading: false,
       selection: 1,
-    }),
+      quantidade: 0,
+      avaliacao: 1,
+
+    }
+  },
+
+  created() {
+        fetch('https://it3-hbn-default-rtdb.firebaseio.com/ovosPascoa.json?=this.$route.params.id')
+        .then(resposta => resposta.json())
+        .then(json => {
+          this.listaOvos = json
+        })
+    },
 
     methods: {
       reserve () {
         this.loading = true
-
         setTimeout(() => (this.loading = false), 2000)
       },
     },
@@ -99,5 +122,7 @@ export default {
 </script>
 
 <style scoped>
-
+.empresa-selecionada{
+  text-decoration: none;
+}
 </style>
